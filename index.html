@@ -18,8 +18,885 @@
 			<div class="slides">
 				<section data-background-image="assets/route1.jpg" data-background-opacity="0.2">
 					<h1>What if Infrastructure as Code never existed?</h1>
+          <h2>Adam Jacob, CEO, System Initiative</h2>
+          <small>(adam@systeminit.com, @adamhjk, @adamhjk@hachyderm.io)</small>
+          <aside class="notes">
+            <ul>
+              <li>Wrote a thing called Chef</li>
+              <li>CEO of System Initiative</li>
+              <li>I didn't come up with this talk title</li>
+              <li>Paul Stack did</li>
+              <li>But then I had to figure out how to live up to the title</li>
+              <li>And to explain how I did that, I have to tell you a story</li>
+            </ul>
+          </aside>
 				</section>
-				<section>Slide 2</section>
+
+				<section>
+          <h1 class="r-fit-text">30 Years</h1>
+          <aside class="notes">
+            <ul>
+              <li>First job in tech was ISP<li>
+              <li>Dentists office 15</li>
+              <li>BSDI servers</li>
+              <li>BBSes since I was 8</li>
+              <li>Sysadmin was cool</li>
+              <li>Now 45</li>
+              <li>Saw web 1, the internet, web 2, dot bomb, started chef, velocity, devops</li>
+              <li>Saw a lot happen</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1 class="r-fit-text">22</h1>
+          <aside class="notes">
+            <ul>
+              <li>22, different internet company</li>
+              <li>Recently divorced</li>
+              <li>Just discovered alcohol</li>
+              <li>New girlfriend drank a lot</li>
+              <li>Really passed out and drunk</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1 class="r-fit-text">Pager</h1>
+          <aside class="notes">
+            <ul>
+              <li>This thing goes off</li>
+              <li>How many of you had one of these?</li>
+              <li>Roll myself out of bed</li>
+              <li>Call my boss back on a land line, because thats what we had then</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1 class="r-fit-text">Marine corps colonel</h1>
+          <h2>john boyd</h2>
+          <aside class="notes">
+            <ul>
+              <li>Important note is my boss was a retired marine corps colonel</li>
+              <li>not this guy, who knows who this is?</li>
+              <li>the ooda loop guy</li>
+              <li>he's in a panic</li>
+              <li>sites down, fix it right now</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1 class="r-fit-text">Really drunk</h1>
+          <aside class="notes">
+            <ul>
+              <li>Full drill sargent</li>
+              <li>soldier, get out of bed, 15 minutes, fix that server</li>
+              <li>sober up</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1 class="r-fit-text">old ford truck</h1>
+          <aside class="notes">
+            <ul>
+              <li>Shows up at my apartment in one of these</li>
+              <li>pops out of the car</li>
+              <li>hands me a cup of coffee</li>
+              <li>marine corps pep, piles me into his car</li>
+              <li>hauls ass to the data center</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1 class="r-fit-text">datacenter rack</h1>
+          <aside class="notes">
+            <ul>
+              <li>grab a crash cart</li>
+              <li>plug in to the servers</li>
+              <li>gives me a full on pep talk</li>
+              <li>going to fix the servers, marches me through it</li>
+              <li>we're not gonna die here</li>
+              <li>I fix the servers</li>
+              <li>great job, nobody died here, lets get breakfast</li>
+              <li>shakes my hand, says I did a good job, drops me off</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1 class="r-fit-text">Crisitunities</h1>
+          <ul>
+            <li>Internet for everyone!</li>
+            <li>Content on the Internet!</li>
+            <li>Build applications on the internet!</li>
+            <li>Social Media!</li>
+            <li>Digital Transformation!</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>And that, pretty much, is what the last 30 years was like</li>
+              <li>for everyone!</li>
+              <li>over and over again for 30 years</li>
+              <li>some version of that colonel begging us to figure it out<li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1 class="r-fit-text">The Creative Act: A way of Being</h1>
+          <aside class="notes">
+            <ul>
+              <li>It was a very creative time</li>
+              <li>Not just for me, for everyone</li>
+              <li>Like musicians swept up in a cultural movement, we just made it up as we went along</li>
+            </ul>
+          </aside>
+        </section>
+        
+				<section>
+          <h1 class="r-fit-text">Rules</h1>
+          <aside class="notes">
+            <ul>
+              <li>When we started, there were no rules</li>
+              <li>The few books on sysadmin gave bad advice!</li>
+              <li>loaded with lies - plug a printer in to the server to print syslog for hard copy in case you get hacked</li>
+              <li>I did - we came in the next day room full of paper</li>
+              <li>Rule after Rule, we made them up<li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1 class="r-fit-text">Laws of Nature</h1>
+          <aside class="notes">
+            <ul>
+              <li>30 years in, you accept those rules like laws of nature</li>
+              <li>Well of course we do it that way, its the only way it could've worked.<li>
+              <li>I assure you, they are not; at best, guiding priciples</li>
+              <li>Maybe creative criteria - the box in which you can create</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <blockquote><q>Rules direct us to <span class="orange">average behaviors</span>. If we're aiming to create works
+            that are exceptional, most rules don't apply. <span class="green">Average is nothing to aspire to</span>.</q></blockquote>
+          <small> -- Rick Rubin, The Creative Act, Page 98</small>
+          <aside class="notes">
+            <ul>
+              <li>And that is why Paul Stack wrote an incredible talk title<li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>Break the rules</h1>
+          <aside class="notes">
+            <ul>
+              <li>Because it's an invitation to break the rules</li>
+              <li>An invitation to explore and create</li>
+              <li>as a movement we're stuck in a rut, playing our own greatest hits</li>
+              <li>why I left chef</li>
+              <li>playing myself on tv</li>
+              <li>small variations on the theme for the same essential outcomes</li>
+              <li>average; its boring.</li>
+              <li>so that's what we're going to do - break some rules</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>Break a rule!</h1>
+          <table>
+            <tr>
+              <td colspan=2>
+                -----> <a href="#/configuration-as-code">Configuration as Code</a> <-----
+              </td>
+            </tr>
+            <tr>
+              <td><center><a href="#/source-control">Source Control</a></center></td>
+              <td><center><a href="#/declarative">Declarative</a></center></td>
+            </tr>
+            <tr>
+            <td><center>Variables</center></td>
+              <td><center><a href="#/testing">Testing</a></center></td>
+            </tr>
+            <tr>
+            <td colspan=2><center>Single Source of Truth</center></td>
+            </tr>
+            <tr>
+            <td colspan=2><center><small>Wrap up!</small></center></td>
+            </tr>
+          </table>
+
+          <aside class="notes">
+            <ul>
+              <li>You shout out which rule you want me to break</li>
+              <li>Then I will break it, and we will do it again</li>
+              <li>Won't be able to break them all before the end</li>
+              <li>Which rule do you want to break</li>
+            </ul>
+          </aside>
+        </section>
+
+        <!-- Begin Configuration As Code -->
+				<section id="configuration-as-code">
+          <h1>Configuration as Code</h1>
+          <aside class="notes">
+            <ul>
+              <li>Very thoughtful of you</li>
+              <li>Have to break this rule first</li>
+              <li>Nearly impossible to imagine breaking the others</li>
+              <li>Everything we do stems from this one historical decision</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>sendmail.cf</h1>
+          <pre>
+            <code>
+            Mlocal, P=/usr/bin/procmail,
+                    F=lsDFMAw5:/|@ShP, S=10/30,
+                    R=20/40, T=DNS/RFC822/X-Unix,
+                    A=procmail -a $h -d $u
+            Mprog, P=/bin/sh, F=lsDFMoeu, S=10/30,
+                   R=20/40, D=$z:/,
+                   T=X-Unix, A=sh -c $u
+            Msmtp, P=[IPC], F=mDFMuX, S=11/31, R=21,
+                   E=\r\n, L=990,
+                   T=DNs/RFC822/SMTP, A=IPC $h
+            </code>
+          </pre>
+          <aside class="notes">
+            <ul>
+              <li>Original configuraiton syntax for sendmail</li>
+              <li>First one was written 41 years ago</li>
+              <li>Who wrote one of these by hand</li>
+              <li>Most straightforword I could find; rewrite rules were line noise</li>
+              <li>So 31 years ago they switched to this</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>sendmail.mc</h1>
+          <pre>
+            <code>
+            include('../m4/cf.m4')
+            OSTYPE(unknown)
+
+            FEATURE(always_add_domain)
+
+            define(`UUCP_RELAY`, `smtp:uunet.uu.net`)
+            define(`LUSER_RELAY`, `smtp:indiana.edu`)
+
+            MAILER(local)
+            MAILER(smtp)
+            </code>
+          </pre>
+          <aside class="notes">
+            <ul>
+              <li>Used the m4 macro pre-processing language</li>
+              <li>to generate the sendmail.cf file - 31 years ago</li>
+              <li>Some had sendmail mc - but we had a few years to go</li>
+              <li>So much easier, so much more dynamic</li>
+              <li>First time I wrote code for configuation - program that generated the config file</li>
+              <li>Helm is sendmail.mc for your yaml</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>Terraform</h1>
+          <pre>
+            <code>
+            resource "aws_instance" "whiskers" {
+              ami = "ami-0bde60638be9bb870"
+              instance_type = "t3.micro"
+              subnet_id = "subnet-07d580fee7a806230"
+              vpc_security_group_ids = [aws_security_group.allow_http.id]
+              key_name = "si_key"
+              associate_public_ip_address = true
+            }
+            </code>
+          </pre>
+          <aside class="notes">
+            <ul>
+              <li>A direct line from sendmail.mc to terraform</li>
+              <li>its really complicated to make all the api calls</li>
+              <li>so we wrote a little language, a macro preprocessor if you will</li>
+              <li>that took in the high level description and then generated the config</li>
+              <li>changed the syntax, gained some power, changed the domain</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section data-background-image="assets/config-as-code-diagram.jpg" data-background-size="contain">
+          <aside class="notes">
+            <ul>
+              <li>Someone writes code</li>
+              <li>ships it to an interpreter</li>
+              <li>interpreter reads it in, does some junk</li>
+              <li>then does some stuff to the world - AWS for terraform, pulumi, cdk</li>
+              <li>store some intermediate state somehow - so we can come back to it later</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>What's Good</h1>
+          <ul>
+            <li>Flexible</li>
+            <li>Less verbose</li>
+            <li>Sometimes refactorable</li>
+            <li>Can abstract anything</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>flexible - say anything you want</li>
+              <li>usually less verbose</li>
+              <li>sometimes you can refactor - refactoring terraform is not fun</li>
+              <li>didn't like refactoring puppet either - that's why I wrote chef</li>
+              <li>can abstract whatever it is</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>What Sucks</h1>
+          <ul>
+            <li>Static</li>
+            <li>Unidirectional</li>
+            <li>Abstract</li>
+            <li>No behavior</li>
+            <li>No relationships</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>It's static - you write it, not a lot you can do with it</li>
+              <li>unidirectional - all the arrows go one way - one way flow</li>
+              <li>abstract - good and bad. great until you don't have a macro for what you need</li>
+              <li>no bheavior - you can't ask your code to do things, to change itself</li>
+              <li>only relationships it understands are code relationships</li>
+              <li>So what would be better?</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>Infrastructure as Model</h1>
+          <ul>
+            <li>Actors</li>
+            <li>State and Mutations</li>
+            <li>Message Passing</li>
+            <li>Behaviors</li>
+            <li>Relationships</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>What if they were actors, not code (elixir, erlang)</li>
+              <li>Store state, take mutations</li>
+              <li>trigger behaviors - start, stop, update your list of tags</li>
+              <li>Relationships between actors - this one requires that</li>
+              <li>Pass a message to another actor when you change</li>
+              <li>That would change the world like this</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section data-background-image="assets/infra-as-model-diagram.jpg" data-background-size="contain">
+          <aside class="notes">
+            <ul>
+              <li>Person can interact with a representation of the model</li>
+              <li>Code or UI or whatever</li>
+              <li>Making a call to a persistent runtime<li>
+              <li>syncs model to your inputs over a message</li>
+              <li>aware of relationships, different actors</li>
+              <li>model could be responsible for syncronizing itself</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>Benefits</h1>
+          <ul>
+            <li>Many representations, including code</li>
+            <li>Relationship aware</li>
+            <li>Easily encapsulate runtime behavior</li>
+            <li>No more state management </li>
+            <li>Bidirectional data flow</li>
+            <li>Easier to model; it's 1:1 (real world is model)</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>Code could be one of many representations</li>
+              <li>So much of what we do is describe relationships</li>
+              <li>You can now ask your actor to do things for you</li>
+              <li>STate management is removed; nobody loves it anyway</li>
+              <li>Bidirectional data flow - the actor handles transitions, drive it from anywhere</li>
+              <li>Easier to model, because we aren't modeling an abstraction - no mapping domain to language</li>
+              <li>Just roll up the behavior of the real world</li>
+            </ul>
+          </aside>
+        </section>
+        <!-- End Configuration as Code -->
+
+        <!-- Begin Change Sets -->
+				<section id="source-control">
+          <h1>Source Control</h1>
+        </section>
+
+				<section>
+          <h1>RCS</h1>
+          <h1>CVS</h1>
+          <aside class="notes">
+            <ul>
+              <li>RCS was my first source control system - 41 years ago</li>
+              <li>RCS individual files</li>
+              <li>CVS neworked version of RCS, multiple files in one commit</li>
+              <li>RCS for config, CVS for app code</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>Git</h1>
+          <aside class="notes">
+            <ul>
+              <li>Most of you have probably only used Git</li>
+              <li>Which works quite similarly</li>
+              <li>Except we distributed it; and then we centralized it again</li>
+              <li>In many ways the UX took a step backwards</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section data-background-image="assets/source-control-diagram.jpg" data-background-size="contain">
+          <aside class="notes">
+            <ul>
+              <li>A person writes some code</li>
+              <li>Checks it in to source control</li>
+              <li>Other people can check it out</li>
+              <li>Essentially unchanged since RCS</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>What's Good</h1>
+          <ul>
+            <li>Save a copy, revert</li>
+            <li>History of changes</li>
+            <li>Diff</li>
+            <li>Share with others; work in parallel</li>
+            <li>Branches</li>
+            <li>Complex capabilities for managing conflict</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>Source control is "text"</li>
+              <li>Rebase</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>What Sucks</h1>
+          <ul>
+            <li>Only good for text</li>
+            <li>No context about impact; only text delta</li>
+            <li>No policy</li>
+            <li>A real pain to automate</li>
+            <li>Rebasing</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>Only the text delta; can't say what will happen</li>
+              <li>GitOps and policy; many repositories as splitter for policy</li>
+              <li>Automating source control sucks</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>Model aware Change Sets</h1>
+          <ul>
+            <li>One "HEAD" model</li>
+            <li>Many hypothetical models</li>
+            <li>All models aware of the same change set (RCS vs CVS)</li>
+            <li>Policy embedded in the model</li>
+            <li>Automatic re-basing</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>The model understands it has many hypothetical configurations</li>
+              <li>Things exist 1:1 in the real world</li>
+              <li>But we can have lots of them in our head</li>
+              <li>Embed policy at the model, rather than source</li>
+              <li>Automatically rebase the model</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section data-background-image="assets/change-sets.jpg" data-background-size="contain">
+          <aside class="notes">
+            <ul>
+              <li>Change one part of the model, it might cascade (aware of the context)</li>
+              <li>Map the relationships; opaque in source code</li>
+              <li>Lots of change sets is a question of perspective</li>
+              <li>Like an overlay to the real world</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>Benefits</h1>
+          <ul>
+            <li>Easy to collaborate</li>
+            <li>Contextual diffs!</li>
+            <li>Automatic rebasing</li>
+            <li>Policy is easy to add</li>
+            <li>Extremely light weight</li>
+          </ul>
+        </section>
+        <!-- End Source Control -->
+
+        <!-- Begin Testing -->
+        <section id="testing">
+          <h1>Testing</h1>
+        </section>
+
+				<section>
+          <h1>Joseph Juran</h1>
+          <h2>Jurans Quality Handbook</h2>
+          <aside class="notes">
+            <ul>
+              <li>Joseph Juran, wrote Jurans Quality Handbook in 1951</li>
+              <li>Obsessed with quality generally and specifically</li>
+              <li>Not just software; quality in general</li>
+              <li>He defines quality in two ways</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <ol>
+            <li>Quality means those features of products which <span class="green">meet customer needs </span>
+                 and thereby provide customer satisfaction.</li>
+            <li>Quality means <span class="orange">freedom from deficiencies</span></li>
+          </ol >
+          <aside class="notes">
+            <ul>
+              <li>Does the product do what its supposed to do</li>
+              <li>Is it free from deficiencies</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h2>Pulumi Unit Test</h2>
+          <pre>
+            <code>
+it("must have a name tag", function(done) {
+ pulumi.all([
+   infra.server.urn, 
+   infra.server.tags
+ ]).apply(([urn, tags]) => {
+   if (!tags || !tags["Name"]) {
+     done(new Error(`Missing a name tag on server ${urn}`));
+   } else {
+     done();
+   }
+ });
+});
+            </code>
+          </pre>
+          <aside class="notes">
+            <ul>
+              <li>Unit test for pulumi, uses jest</li>
+              <li>lightly modified for space</li>
+              <li>Typical of infra as code; not picking on pulumi</li>
+              <li>Obsessed with how pulumi works</li>
+              <li>Wait for those variables, then apply them to the function, then check</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>What's Good</h1>
+          <ul>
+            <li>Catch regressions!</li>
+            <li>Flexible across different layers</li>
+            <li>More context aware</li>
+            <li>Can enforce policy</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>If you didn't have a name tag, it would catch it</li>
+              <li>Gives us back some of that policy</li>
+              <li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>What Sucks</h1>
+          <ul>
+            <li>Slow feedback loops</li>
+            <li>Mocks and stubs</li>
+            <li>Not fit for purpose - testing the code, not the world</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>Slow feedback loops; takes a while, the more you have, the longer it takes</li>
+              <li>Mocks and stubs for infra</li>
+              <li>Testing code makes tons of sense</li>
+              <li>Testing infrastructure isn't testing the outcomes; impedence mismatch</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>Build tests into the model</h1>
+          <ul>
+            <li>Attach functions to lifecycle events</li>
+            <li>Validations</li>
+            <li>Qualifications</li>
+            <li>Confirmations</li>
+            <li>Reactive to inputs</li>
+          </ul>
+          <aside class="notes">
+          </aside>
+        </section>
+
+				<section>
+          <h2>SI Qualification</h2>
+          <pre>
+            <code data-trim data-noescape>
+async function dockerImageExists(component: Input) {
+  const c = await siExec.waitUntilEnd("skopeo", [
+    "inspect",
+    `docker://${component.domain.image}`,
+  ]);
+  return {
+    result: c.exitCode === 0 ? "success" : "failure",
+    message: c.exitCode === 0 ? c.stdout : c.stderr,
+  };
+}
+            </code>
+          </pre>
+          <aside class="notes">
+            <ul>
+              <li>Simplified qualification from System Initiative</li>
+              <li>Checks that an image exists in a registry</li>
+              <li>Reruns every time the image name changes, this runs</li>
+              <li>Focused on its purpose - not with how the program works</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>Benefits</h1>
+          <ul>
+            <li>Immediate feedback!</li>
+            <li>Triggered only when needed</li>
+            <li>Easier to write, because the 'harness' is defined</li>
+            <li>No need to mock or stub</li>
+          </ul>
+        </section>
+        <!-- End Testing -->
+
+        <!-- Begin Declarative -->
+				<section id="declarative">
+          <h1>Declarative</h1>
+        </section>
+
+				<section>
+          <h1>Cfengine 2</h1>
+          <h2>Mark Burgess</h2>
+          <aside class="notes">
+            <ul>
+              <li>Mark Burgess; handsome man, round of applause</li>
+              <li>25 years ago, configuration should be declarative</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h2>Shell</h2>
+          <pre>
+            <code data-trim data-noescape>
+#!/bin/bash
+OS=`cat /etc/os-release | grep ^ID | cut -d '=' -f 2`
+case $OS in
+  "arch")
+    pacman -Syu apache
+    ;;
+  "redhat")
+    yum install httpd
+    ;;
+  *)
+    echo "Unknown OS: $OS"
+    ;;
+esac
+            </code>
+          </pre>
+          <aside class="notes">
+            <ul>
+              <li>He moved us from scripts that describe how to do something</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h2>Cfengine 2</h2>
+          <pre>
+            <code data-trim data-noescape>
+control:
+  actionsequence = ( packages )
+
+redhat::
+  httpd action=install
+
+arch::
+  apache action=install
+            </code>
+          </pre>
+          <aside class="notes">
+            <ul>
+              <li>To a declaration that says what should happen</li>
+              <li>And lets the system figure out how</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h2>Kubernetes</h2>
+          <pre>
+            <code data-trim data-noescape>
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+            </code>
+          </pre>
+          <aside class="notes">
+            <ul>
+              <li>Poster child for being declarative</li>
+              <li>a snippet of a full k8s deployment manifest</li>
+              <li>Write our yaml, hand it to k8s, it reconciles</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section data-background-image="assets/config-as-code-diagram.jpg" data-background-size="contain">
+          <aside class="notes">
+            <ul>
+              <li>Remember this diagram?</li>
+              <li>This is kubernetes too</li>
+              <li>We write out code, ship it to k8s to interpret and reconcile</li>
+              <li>State gets written to etcd</li>
+              <li>On and on we go</li>
+              <li>How much and how often we reconcile is different</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>What's Good</h1>
+          <ul>
+            <li>Declare what you want</li>
+            <li>Can be significantly less verbose</li>
+            <li>Easier to deal with failure</li>
+            <li>Focused on the vocabulary of the domain</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>Easier to say you want a chair vs all the steps to build it</li>
+              <li>Failure happens in the interpreter</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>What Sucks</h1>
+          <ul>
+            <li>Generally 1 state</li>
+            <li>200% Knowledge Problem</li>
+            <li>Difficult to extend</li>
+            <li>Sucks at modeling workflow</li>
+            <li>Takes as long as it takes</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>Only say you want it installed; not installed, then something else, then uninstalled</li>
+              <li>Knowledge of the underlying system + the abstraction ("easier to use")</li>
+              <li>Hard to extend; do it in a different language</li>
+              <li>Moving through multiple states sucks for workflow</li>
+              <li>Takes as long as it takes</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>Infrastructure as Model</h1>
+          <ul>
+            <li>Digital twin (Component <-> Resource)</li>
+            <li>1:1 to the Domain</li>
+            <li>Real world state as part of the model</li>
+            <li>Properties</li>
+            <li>Behavior</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>Think of it as a digital twin</li>
+              <li>Digital (hypothetical) and real world (resource)</li>
+              <li>Heart lung machine</li>
+              <li>Avoids the 200% knowledge problem with 1:1 modeling<li>
+              <li>Describe the full properties and behaviors</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section data-background-image="assets/declarative.jpg" data-background-size="contain">
+          <aside class="notes">
+            <ul>
+              <li>A person sets properties on a component; hypothetical</li>
+              <li>They could call a behavior; create it</li>
+              <li>Creates a resource, the "real world" twin</li>
+              <li>Another person can change the resource directly</li>
+              <li>Go back the other way; no patching source, not git</li>
+              <li>Behaviors string into workflows; multi-step processes</li>
+            </ul>
+          </aside>
+        </section>
+
+				<section>
+          <h1>Benefits</h1>
+          <ul>
+            <li>More control, more power</li>
+            <li>No 200% problem</li>
+            <li>Re-use configuration for behaviors</li>
+            <li>Workflows become trivial</li>
+            <li>Pick and choose behavior</li>
+            <li>Faster!</li>
+          </ul>
+        </section>
+        <!-- End of Declarative -->
+
 			</div>
 		</div>
 
